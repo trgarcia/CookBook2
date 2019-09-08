@@ -5,7 +5,7 @@ describe 'Register recipe from request' do
 
     conn = Faraday.new(:url => 'http://localhost:3000')
 
-    response = conn.post '/api/v1/recipe_types', {name:'Sobre'}
+    response = conn.post '/api/v1/recipe_types', {:name =>'Sobre'}
 
     byebug
     expect(response.status).to eq 200
