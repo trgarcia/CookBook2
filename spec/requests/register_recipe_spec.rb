@@ -7,8 +7,9 @@ describe 'Register recipe from request' do
 
     response = conn.post '/api/v1/recipe_types', {:name =>'Sobre'}
 
-    byebug
+    
     expect(response.status).to eq 200
     expect(response.body).to include 'Bolo de cenoura'
+
   end
 end
